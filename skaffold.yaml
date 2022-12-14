@@ -1,0 +1,10 @@
+apiVersion: skaffold/v4beta1
+kind: Config
+metadata:
+  name: sfeir-factory
+manifests:
+  kustomize:
+    paths:
+      - manifests/gitlab-runner/overlays/default
+    buildArgs:
+      - --enable-helm

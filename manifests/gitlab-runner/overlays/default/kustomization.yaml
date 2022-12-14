@@ -1,0 +1,10 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../../base
+helmCharts:
+  - name: gitlab-runner
+    releaseName: gitlab-runner
+    repo: https://charts.gitlab.io
+    namespace: gitlab-runner
+    version: 0.47.1
